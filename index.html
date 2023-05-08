@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contador de botones</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		button {
+			font-size: 24px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Contador de botones</h1>
+	<button id="ra-btn">Ra</button>
+	<button id="sd-btn">Sd</button>
+	<button id="ecofast-btn">EcoFast</button>
+	<br>
+	<br>
+	<button id="reset-btn">Reset</button>
+
+	<script>
+		let raBtn = document.getElementById("ra-btn");
+		let sdBtn = document.getElementById("sd-btn");
+		let ecofastBtn = document.getElementById("ecofast-btn");
+		let resetBtn = document.getElementById("reset-btn");
+
+		let raCounter = 0;
+		let sdCounter = 0;
+		let ecofastCounter = 0;
+
+		raBtn.onclick = function() {
+			raCounter++;
+			raBtn.innerHTML = "Ra: " + raCounter;
+		}
+
+		sdBtn.onclick = function() {
+			sdCounter++;
+			sdBtn.innerHTML = "Sd: " + sdCounter;
+		}
+
+		ecofastBtn.onclick = function() {
+			ecofastCounter++;
+			ecofastBtn.innerHTML = "EcoFast: " + ecofastCounter;
+		}
+
+		resetBtn.onclick = function() {
+			raCounter = 0;
+			sdCounter = 0;
+			ecofastCounter = 0;
+			raBtn.innerHTML = "Ra";
+			sdBtn.innerHTML = "Sd";
+			ecofastBtn.innerHTML = "EcoFast";
+		}
+	</script>
+</body>
+</html>
